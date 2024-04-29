@@ -1,0 +1,66 @@
+@import "styles/mixins.scss";
+
+.header {
+  background-image: url("/assets/images/bg_gradient_top.png");
+  height: 400px;
+  padding-top: 30px;
+
+  &_navbar {
+    @include justify-content-between;
+    align-items: center;
+    width: 1024px;
+    position: fixed;
+    background-color: rgb(255 255 255 / 25%);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    padding: 5px 10px;
+    border-radius: 12px;
+
+    &_logo {
+      color: inherit;
+    }
+
+    nav {
+      ul {
+        @include justify-content-between;
+        align-items: center;
+        gap: 40px;
+
+        li {
+          list-style-type: none;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    &_utils {
+      @include justify-content-between;
+      align-items: center;
+      gap: 10px;
+      &_langs {
+        ul {
+          @include justify-content-between;
+          align-items: center;
+          gap: 7px;
+
+          li {
+            list-style-type: none;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    &_medias {
+      @include justify-content-between;
+      gap: 10px;
+      align-items: center;
+      margin-top: 7px;
+
+      &_item {
+        cursor: pointer;
+      }
+    }
+  }
+}
