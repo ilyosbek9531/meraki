@@ -1,8 +1,16 @@
 {
   "greeting": "Salom Dunyo",
-  "home": "Asosiy sahifa",
+  "services": "Xizmatlar",
   "blog": "Blog",
-  "about": "Men haqimda",
+  "about": "Haqimizda",
   "projects": "Loyihalar",
-  "skills": "Qobilyatlar"
+  "career":"Karyera",
+  "contact": "Aloqa",
+  "© 2024 meraki. - All rights reserved.":"© 2024 meraki. - Barcha huquqlar himoyalangan.",
+  "location":"Manzil",
+  "pages":"Sahifalar",
+  "our social medias":"Ishtimoiy tarmoqlar ",
+  "Digital-marketing": "Raqamli-marketing",
+  "agency":"agentlik",
+  "let's talk": "Keling gaplashamiz"
 }

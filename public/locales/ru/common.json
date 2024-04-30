@@ -1,8 +1,16 @@
 {
   "greeting": "Привет, мир",
-  "home": "Главная",
+  "services": "услуги",
   "blog": "Блог",
-  "about": "Обо мне",
+  "about": "о нас",
   "projects": "Проекты",
-  "skills": "Способности"
+  "career":"Карьера",
+  "contact": "Контакт",
+  "© 2024 meraki. - All rights reserved.": "© 2024 Мераки. - Все права защищены.",
+  "location":"Расположение",
+  "pages":"Страницы",
+  "our social medias":"Социальные сети",
+  "Digital-marketing": "Цифровой-маркетинг",
+  "agency":"агентство",
+  "let's talk": "Давай поговорим"
 }

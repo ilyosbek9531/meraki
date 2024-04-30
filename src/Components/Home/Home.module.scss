@@ -1,0 +1,41 @@
+@import "styles/mixins.scss";
+
+.main_wrapper {
+    @include justify-content-between;
+    margin: 40px 0;
+  
+    &_infos{
+      @include direction-column;
+      gap: 50px;
+      .hashtitle{
+        font-size: 18px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        .redLetter{
+          color: #EC3B3B;
+        }
+      }
+  
+      .mainTitle{
+        font-size: 60px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+  
+      .info{
+        font-size: 24px;
+        max-width: 640px;
+        letter-spacing: 1px;   
+        margin-bottom: 5px;
+      }
+  
+      .buttons{
+        @include align-items-center;
+        gap: 20px;
+      }
+    }
+  
+    &_imgs{
+      border: 2px solid yellow;
+    }
+  }

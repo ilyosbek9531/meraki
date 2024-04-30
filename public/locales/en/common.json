@@ -1,8 +1,16 @@
 {
   "greeting": "Hello world",
-  "home": "Home",
+  "services": "Services",
   "blog": "Blog",
-  "about": "About Me",
+  "about": "About",
   "projects": "Projects",
-  "skills": "Skills"
+  "career":"Career",
+  "contact": "Contact",
+  "© 2024 meraki. - All rights reserved.": "© 2024 meraki. - All rights reserved.",
+  "location":"Location",
+  "pages":"Pages",
+  "our social medias":"Social Medias",
+  "Digital-marketing": "Digital-marketing",
+  "agency":"agency",
+  "let's talk": "Let's talk"
 }

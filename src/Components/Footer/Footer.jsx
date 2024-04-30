@@ -2,16 +2,24 @@ import styles from "./Footer.module.scss";
 import { NavLink } from "react-router-dom";
 import { Container, useTheme } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import {
+  FaceBookIcon,
+  InstagramIcon,
+  StarIcon,
+  TelegramIcon,
+  WhatsupIcon,
+} from "helpers/icons";
+import i18n from "i18n";
 
 const navItems = [
   {
-    path: "/",
-    slug: "home",
+    path: "/services",
+    slug: "services",
     state: null,
   },
   {
-    path: "/blog",
-    slug: "blog",
+    path: "/projects",
+    slug: "projects",
     state: null,
   },
   {
@@ -20,38 +28,65 @@ const navItems = [
     state: null,
   },
   {
-    path: "/projects",
-    slug: "projects",
+    path: "/blog",
+    slug: "blog",
+    state: null,
+  },
+  {
+    path: "/career",
+    slug: "career",
+    state: null,
+  },
+  {
+    path: "/contact",
+    slug: "contact",
     state: null,
   },
 ];
 
 const medias = [
+  // {
+  //   icon: <FaceBookIcon/>,
+  //   link: "",
+  // },
   {
-    name: "Email",
-    link: "ilyosbeksheraliyev838@gmail.com",
+    icon: <InstagramIcon />,
+    link: "",
   },
   {
-    name: "LinkedIn",
-    link: "https://www.linkedin.com/in/ilyosbek-sheraliyev-451116277/",
+    icon: <TelegramIcon />,
+    link: "",
   },
   {
-    name: "Github",
-    link: "https://github.com/ilyosbek9531",
-  },
-  {
-    name: "Telegram",
+    icon: <WhatsupIcon />,
     link: "",
   },
 ];
 
 export function Footer() {
   const { t } = useTranslation("common");
-  const theme = useTheme();
+  const {
+    palette: { mode },
+  } = useTheme();
   return (
-    <footer className={styles.footer}>
+    <footer
+      className={styles.footer}
+      style={{ backgroundColor: mode === "dark" ? "" : "#2B2D42" }}
+    >
       <Container>
         <div className={styles.footer_main}>
+          <div className={styles.star_items}>
+            <span className={`${styles.star_items_item} ${styles.item1}`}>
+              {/* <img src="../../Portal.png" alt="" /> */}
+              <StarIcon/>
+            </span>
+            <span className={`${styles.star_items_item} ${styles.item2}`}>
+              <StarIcon/>
+            </span>
+            <span className={`${styles.star_items_item} ${styles.item3}`}>
+              <StarIcon/>
+            </span>
+          </div>
           <div className={styles.footer_main_logo}>
             <NavLink
               to="/"
@@ -60,13 +95,36 @@ export function Footer() {
                 textDecoration: "inherit",
               }}
             >
-              <h2 className={styles.footer_main_logo}>[ I ]</h2>
+              <h2 className={styles.footer_main_logo}>meraki.</h2>
             </NavLink>
-            <p>Thanks for visiting site</p>
           </div>
           <div className={styles.footer_main_info}>
             <div className={styles.footer_main_info_items}>
-              <h4>Links</h4>
+              <h4>{t("location")}</h4>
+              <p>
+                {i18n.language === "en" ? (
+                  <>
+                    Tashkent, Uzbekistan <br />
+                    Yakkasaray district, <br />
+                    Urikzor st., 124
+                  </>
+                ) : i18n.language === "ru" ? (
+                  <>
+                    Ташкент, Узбекистан <br />
+                    Яккасарайский район, <br />
+                    ул. Урикзор, 124
+                  </>
+                ) : (
+                  <>
+                    Toshkent, O'zbekiston <br />
+                    Yakkasaroy tumani, <br />
+                    Oʻrikzor koʻchasi, 124-uy
+                  </>
+                )}
+              </p>
+            </div>
+            <div className={styles.footer_main_info_items}>
+              <h4>{t("pages")}</h4>
               <nav>
                 <ul>
                   {navItems.map((item) => (
@@ -76,8 +134,8 @@ export function Footer() {
                         state={item.state}
                         style={({ isActive }) => ({
                           color: isActive
-                            ? theme.palette.mode === "dark"
-                              ? "#FF8C00"
+                            ? mode === "dark"
+                              ? "#FFFFFF"
                               : "crimson"
                             : "inherit",
                           textDecoration: "inherit",
@@ -91,7 +149,7 @@ export function Footer() {
               </nav>
             </div>
             <div className={styles.footer_main_info_items}>
-              <h4>Elsewhere</h4>
+              <h4>{t("our social medias")}</h4>
               <nav>
                 <ul>
                   {medias.map((item) => (
@@ -103,7 +161,7 @@ export function Footer() {
                           textDecoration: "inherit",
                         }}
                       >
-                        {t(item.name)}
+                        {item.icon}
                       </NavLink>
                     </li>
                   ))}
@@ -112,7 +170,10 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <span>© 2024 Ilyosbek Sheraliyev. All Rights Reserved.</span>
+        <span className={styles.footer_items}>
+          {t("© 2024 meraki. - All rights reserved.")}
+          <a href="/">Digitals_Group</a>
+        </span>
       </Container>
     </footer>
   );

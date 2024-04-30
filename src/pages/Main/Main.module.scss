@@ -1,6 +1,24 @@
 @import "styles/mixins.scss";
 
-.main {
+
+
+.animationslide_wrapper{
   @include direction-column;
-  gap: 100px;
+    gap: 20px;
+    height: 100%;
+    // position: absolute;
+
+    .marquee {
+      height: 100%;
+      padding: 15px 0;
+
+      &__item {
+        @include align-items-center;
+        margin-right: 100px;
+      }
+    }
+
+
 }
+
+

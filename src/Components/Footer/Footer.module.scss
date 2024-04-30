@@ -1,20 +1,40 @@
 @import "styles/mixins.scss";
 
 .footer {
-  background-image: url("/assets/images/bg_gradient_bottom.png");
   background-position-y: -150px;
-  height: 350px;
   padding: 100px 0 10px 0;
+  color: #FFFFFF;
+
+  .star_items{
+    position: absolute;
+
+    .item1{
+      position: relative;
+      top: 150px;
+      left: -20px;
+    }
+
+    .item2{
+      position: relative;
+      top: -90px;
+      left:5px;
+    }
+
+    .item3{
+      position: relative;
+      right: -100px;
+      border: 2px solid red
+    }
+  }
 
   &_main {
     @include justify-content-between;
     padding-bottom: 30px;
 
     &_logo {
-      p {
-        color: gray;
-        font-size: 16px;
-      }
+      font-size: 56px;
+      font-family: "Poppins" sans-serif;
+      letter-spacing: 2px;
     }
 
     &_info {
@@ -34,7 +54,8 @@
               list-style-type: none;
               font-weight: 500;
               letter-spacing: 1px;
-              color: gray;
+              color: inherit;
+              text-transform: capitalize;
             }
           }
         }
@@ -42,7 +63,15 @@
     }
   }
 
-  span {
-    color: gray;
+  .footer_items {
+    text-align: center;
+    @include direction-column;
+    font-size: 19px;
+
+    a{
+      color: inherit;
+    }
   }
 }
+
+

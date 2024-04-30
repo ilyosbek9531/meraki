@@ -1,0 +1,16 @@
+@import "styles/mixins.scss";
+
+.counter_wrapper{
+    @include element-center;
+  
+   &_boxes{
+    @include align-items-center;
+    gap: 20px;
+    margin-bottom: 20px;
+  
+    &_box{
+      background: #fff;
+      border-radius: 20px 20px 0 20px;
+    }
+   }
+  }

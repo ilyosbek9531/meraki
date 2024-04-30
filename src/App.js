@@ -20,13 +20,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Starfield
+      {/* <Starfield
         starCount={4000}
         starColor={[255, 255, 255]}
         speedFactor={0.02}
         backgroundColor="black"
-      />
-      <Navbar />
+      /> */}
+      <div className="navbar">
+        <Navbar />
+      </div>
       {Routes()}
       <Footer />
     </ThemeProvider>
