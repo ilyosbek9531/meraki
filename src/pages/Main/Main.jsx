@@ -77,110 +77,15 @@ const Main = () => {
   } = useTheme();
   return (
     <div>
-      <Home/>
-      <div className={styles.animationslide_wrapper}>
-        <div
-          className={styles.marqueeRoot}
-          style={{ backgroundColor: mode === "dark" ? "#EC3B3B" : "#2B2D42" }}
-        >
-          <Marquee
-            className={styles.marquee}
-            pauseOnHover={false}
-            speed={40}
-            direction="left"
-            gradientWidth={100}
-            // gradient={width1000px}
-            gradientColor={[255, 255, 255]}
-          >
-            {data?.root1?.map((el, index) => (
-              <div
-                className={styles.marquee__item}
-                style={{ color: mode === "dark" ? el.dark : el.color }}
-              >
-                <h1>{t(el.text)}</h1>
-              </div>
-            ))}
-          </Marquee>
-        </div>
-        <div
-          className={styles.marqueeRoot}
-          style={{ backgroundColor: mode === "dark" ? "#EC3B3B" : "#2B2D42" }}
-        >
-          <Marquee
-            className={styles.marquee}
-            pauseOnHover={false}
-            speed={40}
-            direction="right"
-            gradientWidth={100}
-            // gradient={width1000px}
-            gradientColor={[255, 255, 255]}
-          >
-            {data?.root1?.map((el, index) => (
-              <div
-                className={styles.marquee__item}
-                style={{ color: mode === "dark" ? el.dark : el.color }}
-              >
-                <h1>{t(el.text)}</h1>
-              </div>
-            ))}
-          </Marquee>
-        </div>
-      </div>
+      <Home data ={data}/>
+      
       <Services/>
-      <div className={styles.animationslide_wrapper}>
-        <div
-          className={styles.marqueeRoot}
-          style={{ backgroundColor: mode === "dark" ? "#EC3B3B" : "#2B2D42" }}
-        >
-          <Marquee
-            className={styles.marquee}
-            pauseOnHover={false}
-            speed={40}
-            direction="left"
-            gradientWidth={100}
-            // gradient={width1000px}
-            gradientColor={[255, 255, 255]}
-          >
-            {data?.root2?.map((el, index) => (
-              <div
-                className={styles.marquee__item}
-                style={{ color: mode === "dark" ? el.dark : el.color }}
-              >
-                <h1>{t(el.text)}</h1>
-              </div>
-            ))}
-          </Marquee>
-        </div>
 
-        <div
-          className={styles.marqueeRoot}
-          style={{ backgroundColor: mode === "dark" ? "#EC3B3B" : "#2B2D42" }}
-        >
-          <Marquee
-            className={styles.marquee}
-            pauseOnHover={false}
-            speed={40}
-            direction="right"
-            gradientWidth={100}
-            // gradient={width1000px}
-            gradientColor={[255, 255, 255]}
-          >
-            {data?.root2?.map((el, index) => (
-              <div
-                className={styles.marquee__item}
-                style={{ color: mode === "dark" ? el.dark : el.color }}
-              >
-                <h1>{t(el.text)}</h1>
-              </div>
-            ))}
-          </Marquee>
-        </div>
-      </div>
       <div
         className={styles.projects_wrapper}
         style={{ backgroundColor: mode === "light" ? "#EC3B3B" : "" }}
       >
-        <CountUpComp/>
+        <CountUpComp data={data}/>
         <Projects/>
       </div>
     </div>

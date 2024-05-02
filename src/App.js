@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { amber, deepOrange, grey } from "@mui/material/colors";
 import createCustomTheme from "mui-theme";
 import Starfield from "react-starfield";
+import { useState } from "react";
 
 function App() {
   const mode = useSelector((store) => store.theme.theme);
@@ -16,16 +17,19 @@ function App() {
     grey,
     deepOrange,
   });
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {/* <Starfield
-        starCount={4000}
-        starColor={[255, 255, 255]}
-        speedFactor={0.02}
-        backgroundColor="black"
-      /> */}
       <div className="navbar">
         <Navbar />
       </div>

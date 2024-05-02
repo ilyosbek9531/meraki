@@ -1,41 +1,68 @@
 @import "styles/mixins.scss";
 
+.home{
+  position: relative;
+  z-index: -100;
+
+  .topimg{
+    position: absolute;
+    top: -200px;
+    right: 0;
+  }
+  .bottomimg{
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    z-index: -100;
+  }
+}
 .main_wrapper {
-    @include justify-content-between;
-    margin: 40px 0;
-  
-    &_infos{
+  @include justify-content-between;
+  position: relative;
+  margin: 50px 0;
+
+  &_infos {
+    @include element-center;
+
+    &_item {
       @include direction-column;
       gap: 50px;
-      .hashtitle{
-        font-size: 18px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        .redLetter{
-          color: #EC3B3B;
-        }
-      }
-  
-      .mainTitle{
-        font-size: 60px;
-        font-weight: 500;
-        margin-bottom: 20px;
-      }
-  
-      .info{
-        font-size: 24px;
-        max-width: 640px;
-        letter-spacing: 1px;   
-        margin-bottom: 5px;
-      }
-  
-      .buttons{
-        @include align-items-center;
-        gap: 20px;
-      }
     }
-  
-    &_imgs{
-      border: 2px solid yellow;
+    .hashtitle {
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .mainTitle {
+      font-size: 60px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 24px;
+      max-width: 640px;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .buttons {
+      @include align-items-center;
+      gap: 20px;
     }
   }
+
+  &_imgs {
+    max-width: 730px;
+    max-height: 720px;
+    
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    // border: 2px solid red;
+  }
+}

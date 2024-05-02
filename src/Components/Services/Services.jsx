@@ -4,49 +4,83 @@ import { DoneIcon } from 'helpers/icons'
 import { t } from 'i18next'
 import { Container } from '@mui/material'
 import ServiceItem from 'Components/ServiceItem/ServiceItem'
+import serviceImg1 from "../../assets/images/communication.png"
+import serviceImg2 from "../../assets/images/seo.png"
+import serviceImg3 from "../../assets/images/branding.png"
+import serviceImg4 from "../../assets/images/promotion.png"
+import serviceImg5 from "../../assets/images/digital .png"
+import serviceImg6 from "../../assets/images/website.png"
 
 
-const data =[
+
+const data = [
   {
-    img: "/",
-    subtitle: "Communocation",
-    serviceTypes: ["SMM promotion", "SMM promotion", "SMM promotion"]
+    img: serviceImg1,
+    subtitle: "Communication",
+    serviceTypes: [
+      { name: "SMM promotion", link: "/smm-promotion" },
+      { name: "SMM promotion", link: "/smm-promotion" },
+      { name: "SMM promotion", link: "/smm-promotion" }
+    ]
   },
   {
-    img: "/",
+    img:serviceImg2,
     subtitle: "Performance-marketing",
-    serviceTypes: ["Target advertising", "Content advertising", "SEO - website promotion"]
+    serviceTypes: [
+      { name: "Target advertising", link: "/target-advertising" },
+      { name: "Content advertising", link: "/content-advertising" },
+      { name: "SEO - website promotion", link: "/seo-website-promotion" }
+    ]
   },
   {
-    img: "/",
+    img: serviceImg3,
     subtitle: "Branding",
-    serviceTypes: ["Identity", "Naming", "Design support"]
+    serviceTypes: [
+      { name: "Identity", link: "/identity" },
+      { name: "Naming", link: "/naming" },
+      { name: "Design support", link: "/design-support" }
+    ]
   },
   {
-    img: "/",
+    img: serviceImg4,
     subtitle: "Communocation",
-    serviceTypes: ["SMM promotion", "SMM promotion", "SMM promotion"]
+    serviceTypes: [
+      { name: "SMM promotion", link: "/smm-promotion" },
+      { name: "SMM promotion", link: "/smm-promotion" },
+      { name: "SMM promotion", link: "/smm-promotion" }
+    ]
   },
   {
-    img: "/",
+    img: serviceImg5,
     subtitle: "Comprehensive promotion",
-    serviceTypes: ["Analytics", "Optimization", "high-quality advertising creative"]
+    serviceTypes: [
+      { name: "Analytics", link: "/analytics" },
+      { name: "Optimization", link: "/optimization" },
+      { name: "High-quality advertising creative", link: "/high-quality-advertising-creative" }
+    ]
   },
   {
-    img: "/",
+    img: serviceImg6,
     subtitle: "Websites",
-    serviceTypes: ["UX/UI design", "No-code development", "Technical support"]
+    serviceTypes: [
+      { name: "UX/UI design", link: "/ux-ui-design" },
+      { name: "No-code development", link: "/no-code-development" },
+      { name: "Technical support", link: "/technical-support" }
+    ]
   }
 ];
 
+
 export default function Services() {
+  const sliceData = data.slice(0, 6);
+
   return (
     <Container>
         <div className={styles.services_wrapper}>
           <h1 className="title">{t("Our Services")}</h1>
 
           <div className={styles.services_wrapper_boxes}>
-            {data?.map((item)=>(
+            {sliceData?.map((item)=>(
               <ServiceItem img={item.img} subtitle={item.subtitle} serviceTypes={item.serviceTypes}/>              
             ))}
           </div>
