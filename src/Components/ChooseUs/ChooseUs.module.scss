@@ -1,0 +1,45 @@
+@import "styles/mixins.scss";
+
+.chooseUs{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+
+    .infos{
+        @include direction-column;
+        gap: 20px;
+
+        .question{
+            font-weight: 400;
+            font-size: 36px;
+        }
+
+        .title{
+            font-size: 50px;
+            letter-spacing: 2px;
+        }
+
+        .content{
+            padding: 0 20px;
+
+            &_item{
+                @include align-items-center;
+                gap: 20px;
+
+                h1{
+                    font-size: 24px;
+                }
+            }
+            p{
+                padding: 0 45px;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .img_wrapper{
+        max-width: 650px;
+        max-height: 650px;
+    }
+}

@@ -6,7 +6,8 @@ import Services from "Components/Services/Services";
 import Home from "Components/Home/Home";
 import CountUpComp from "Components/CountupComp/CountUpComp";
 import Projects from "Components/Projects/Projects";
-
+import ChooseUs from "Components/ChooseUs/ChooseUs";
+import Reviews from "Components/Reviews/Reviews";
 const data = {
   root1: [
     {
@@ -46,27 +47,7 @@ const data = {
     {
       text: "meraki",
       color: "#fff",
-    },
-    // {
-    //   text: "Performance",
-    //   color: "#EC3B3B",
-    //   dark: "#000",
-    // },
-    // {
-    //   text: "Strategy",
-    //   color: "#fff"
-
-    // },
-    // {
-    //   text: "Complex",
-    //   color: "#EC3B3B",
-    //   dark: "#000",
-    // },
-    // {
-    //   text: "Communication",
-    //   color: "#fff"
-
-    // },
+    }
   ],
 };
 
@@ -88,6 +69,8 @@ const Main = () => {
         <CountUpComp data={data}/>
         <Projects/>
       </div>
+        <ChooseUs/>
+        <Reviews/>
     </div>
   );
 };
