@@ -1,11 +1,11 @@
 @import "styles/mixins.scss";
 
-.services_wrapper{
-  margin: 90px 0;
+.services_wrapper {
+  margin-bottom: 90px;
 
-    &_boxes{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 20px;
-    }
+  &_boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 20px;
   }
+}
