@@ -65,13 +65,13 @@ const data = {
 };
 const Partners = () => {
   return (
-    <div>
+    <div className={styles.partners}>
       <Container>
         <h1 style={{ textAlign: "left" }} className="title">
           {t("Partners")}
         </h1>
       </Container>
-      <div className={styles.partners}>
+      <div className={styles.partners_wrapper}>
         <div className={styles.marqueeRoot}>
           <Marquee
             className={styles.marquee}
