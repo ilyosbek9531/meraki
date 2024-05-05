@@ -59,7 +59,7 @@ const Main = () => {
     palette: { mode },
   } = useTheme();
   return (
-    <div>
+    <div className={styles.main}>
       <Home data={data} />
 
       <Services />

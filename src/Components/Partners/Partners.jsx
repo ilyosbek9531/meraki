@@ -26,6 +26,15 @@ const data = {
     {
       img: img5,
     },
+    {
+      img: img3,
+    },
+    {
+      img: img1,
+    },
+    {
+      img: img2,
+    },
   ],
   root2: [
     {
@@ -43,6 +52,15 @@ const data = {
     {
       img: img5,
     },
+    {
+      img: img3,
+    },
+    {
+      img: img1,
+    },
+    {
+      img: img2,
+    },
   ],
 };
 const Partners = () => {
@@ -59,10 +77,8 @@ const Partners = () => {
             className={styles.marquee}
             pauseOnHover={false}
             speed={40}
+            loop={0}
             direction="right"
-            gradientWidth={100}
-            // gradient={width1000px}
-            gradientColor={[255, 255, 255]}
           >
             {data?.root1?.map((el, index) => (
               <div className={styles.marquee__item} key={index}>
@@ -77,10 +93,8 @@ const Partners = () => {
             className={styles.marquee}
             pauseOnHover={false}
             speed={40}
+            loop={0}
             direction="left"
-            gradientWidth={100}
-            // gradient={width1000px}
-            gradientColor={[255, 255, 255]}
           >
             {data?.root2?.map((el, index) => (
               <div key={index} className={styles.marquee__item}>
