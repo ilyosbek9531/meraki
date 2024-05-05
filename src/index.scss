@@ -64,20 +64,29 @@ a{
       }
     }
 
-    // .marquee2{
-    //   position: absolute;
-    //   top: 10px;
-    //   transform: rotate(-4deg);
-    //   z-index: 100;
-    // }
+    .marquee2{
+      position: absolute;
+      top: 10px;
+      transform: rotate(-4deg);
+      z-index: 100;
+    }
 
-    // .marquee3{
-    //   position: absolute;
-    //   top: 10px;
-    //   transform: rotate(4deg);
-    //   z-index: 100;
-    // }
+    .marquee3{
+      position: absolute;
+      top: 10px;
+      transform: rotate(4deg);
+      z-index: 100;
+    }
 
+}
+
+
+.mySwiper{
+  .swiper-button-prev,
+  .swiper-button-next,
+  .swiper-pagination{
+    display: none;
+  }
 }
 
 

@@ -8,14 +8,14 @@ import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import reviewer from "../../assets/images/reviewer.jpg";
+import reviewer from "../../assets/images/imgReview.png";
 import { Container } from "@mui/material";
 import { t } from "i18next";
 
 const data = [
   {
     name: "Alisher Gulomov",
-    videoLink: "https://youtu.be/gPQaFXtvTF4?si=9r7-NyEUn4gprd6n",
+    videoLink: "https://www.youtube.com/embed/sNqfQZI9WdU?si=6llsLDBz5V6fwCz_",
     reviewerImg: reviewer,
     companyName: "Digital Solutions",
     position: "Project Manager",
@@ -24,7 +24,7 @@ const data = [
   },
   {
     name: "Alisher Gulomov",
-    videoLink: "https://youtu.be/gPQaFXtvTF4?si=9r7-NyEUn4gprd6n",
+    videoLink: "https://www.youtube.com/embed/sNqfQZI9WdU?si=6llsLDBz5V6fwCz_",
     reviewerImg: reviewer,
     companyName: "Digital Solutions",
     position: "Project Manager",
@@ -33,7 +33,7 @@ const data = [
   },
   {
     name: "Alisher Gulomov",
-    videoLink: "https://youtu.be/gPQaFXtvTF4?si=9r7-NyEUn4gprd6n",
+    videoLink: "https://www.youtube.com/embed/sNqfQZI9WdU?si=6llsLDBz5V6fwCz_",
     reviewerImg: reviewer,
     companyName: "Digital Solutions",
     position: "Project Manager",
@@ -42,16 +42,7 @@ const data = [
   },
   {
     name: "Alisher Gulomov",
-    videoLink: "https://youtu.be/gPQaFXtvTF4?si=9r7-NyEUn4gprd6n",
-    reviewerImg: reviewer,
-    companyName: "Digital Solutions",
-    position: "Project Manager",
-    review:
-      "“ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa. Aliquam in hendrerit urn. Pellentesque sit amet sapien fringilla, mattis ligu consecetur, ultrices mauris. Maecenas vitae mattis tellus. ”  ",
-  },
-  {
-    name: "Alisher Gulomov",
-    videoLink: "https://youtu.be/gPQaFXtvTF4?si=9r7-NyEUn4gprd6n",
+    videoLink: "https://www.youtube.com/embed/sNqfQZI9WdU?si=6llsLDBz5V6fwCz_",
     reviewerImg: reviewer,
     companyName: "Digital Solutions",
     position: "Project Manager",
@@ -63,29 +54,32 @@ const data = [
 const Reviews = () => {
   return (
     <Container>
-      <h1 className="title">{t("Reviews")}</h1>
+      <h1 style={{textAlign:"left"}}className="title">{t("Reviews")}</h1>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 1500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay]}
+        speed={3000}
+        loop={true}
         className="mySwiper"
       >
         {data?.map((item) => (
           <SwiperSlide>
             <div className={styles.review_wrapper}>
               <div className={styles.video_wrapper}>
-                <video controls>
-                  <source src={item.videoLink} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <div className={styles.video}>
+                <video
+                  width="705px"
+                  height="408px"
+                  src={item.videoLink}
+                  frameBorder="0"
+                  allowFullScreen
+                ></video>
+                </div>
               </div>
               <div className={styles.review_wrapper_infos}>
                 <div className={styles.personDetails}>

@@ -1,13 +1,15 @@
 import { useTheme } from "@mui/material";
 import styles from "./Main.module.scss";
 import { useTranslation } from "react-i18next";
-import Marquee from "react-fast-marquee";
 import Services from "Components/Services/Services";
 import Home from "Components/Home/Home";
 import CountUpComp from "Components/CountupComp/CountUpComp";
 import Projects from "Components/Projects/Projects";
 import ChooseUs from "Components/ChooseUs/ChooseUs";
 import Reviews from "Components/Reviews/Reviews";
+import Partners from "Components/Partners/Partners";
+import { Article } from "@mui/icons-material";
+import Articles from "Components/Articles/Articles";
 const data = {
   root1: [
     {
@@ -47,7 +49,7 @@ const data = {
     {
       text: "meraki",
       color: "#fff",
-    }
+    },
   ],
 };
 
@@ -58,19 +60,28 @@ const Main = () => {
   } = useTheme();
   return (
     <div>
-      <Home data ={data}/>
-      
-      <Services/>
+      <Home data={data} />
+
+      <Services />
 
       <div
         className={styles.projects_wrapper}
         style={{ backgroundColor: mode === "light" ? "#EC3B3B" : "" }}
       >
-        <CountUpComp data={data}/>
-        <Projects/>
+        <CountUpComp data={data} />
+        
+        <Projects />
       </div>
-        <ChooseUs/>
-        <Reviews/>
+
+      <ChooseUs />
+
+      <Reviews />
+
+      <div style={{ backgroundColor: mode === "dark" ? "#535353" : "" }}>
+        <Partners />
+      </div>
+
+      <Articles/>
     </div>
   );
 };

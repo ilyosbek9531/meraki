@@ -1,1 +1,72 @@
 @import "styles/mixins.scss";
+.review_wrapper{
+    @include align-items-center;
+    gap: 20px;
+
+
+    .video_wrapper{
+        width: 50%;
+        border: 2px solid red;
+
+
+        .video{
+            width: 690px !important;
+            height: 400px;
+            video{
+                border-radius: 40px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &_infos{
+        @include direction-column;
+        gap: 30px;
+        width: 50%;
+
+        .personDetails{
+            @include align-items-center;
+            gap: 20px;
+
+            .img_wrapper{
+                max-width: 123px;
+                max-height: 127px;
+                border-radius: 50%;
+                width: 50%;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .personJobsDetails{
+                h1{
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: inherit;
+                    letter-spacing: 2px;
+                }
+                h2{
+                    font-size: 18px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+
+                }
+                h3{
+                    color: #EC3B3B;
+                    font-weight: 400;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        p{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
