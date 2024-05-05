@@ -1,6 +1,6 @@
 @import "styles/mixins.scss";
 @import "styles/functions.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 *,
 *::after,
@@ -16,28 +16,27 @@ body {
   scroll-behavior: smooth;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.title{
+.title {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
   padding-bottom: 30px;
 }
 
-.subtitle{
+.subtitle {
   font-size: 25px;
   font-weight: 600;
   text-align: center;
 }
 
-.redLetters{
-    color: #EC3B3B;
-    font-weight: 600;
-  }
-
+.redLetters {
+  color: #ec3b3b;
+  font-weight: 600;
+}
 
 .navbar {
   padding-bottom: 85px;
@@ -49,117 +48,73 @@ a{
   @include element-center;
 }
 
-.animationslide_wrapper{
+.animationslide_wrapper {
   @include direction-column;
-    gap: 10px;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0;
+  bottom: 30px;
+
+  .marquee {
+    overflow: hidden;
+    height: 100%;
+    padding: 15px 0;
+
+    &__item {
+      @include align-items-center;
+      padding-left: 100px;
+    }
+  }
+
+  .marquee2 {
     position: relative;
+    bottom: 40px;
+    transform: rotate(-5deg);
+    z-index: 100;
+    width: 110%;
+    left: -10px;
+  }
 
-    .marquee {
-      height: 100%;
-      padding: 15px 0;
-
-      &__item {
-        @include align-items-center;
-        padding-left: 100px;
-      }
-    }
-
-    .marquee2{
-      position: absolute;
-      top: 10px;
-      transform: rotate(-4deg);
-      z-index: 100;
-    }
-
-    .marquee3{
-      position: absolute;
-      top: 10px;
-      transform: rotate(4deg);
-      z-index: 100;
-    }
-
+  .marquee3 {
+    position: relative;
+    bottom: 40px;
+    transform: rotate(5deg);
+    z-index: 100;
+    left: -10px;
+    width: 110%;
+  }
 }
 
-
-.mySwiper{
+.mySwiper {
   .swiper-button-prev,
   .swiper-button-next,
-  .swiper-pagination{
+  .swiper-pagination {
     display: none;
   }
 }
 
-
-.rfm-marquee{
+.rfm-marquee {
   min-width: unset !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Default scrollbar width */
 ::-webkit-scrollbar {
   width: 3px;
 }
 
-
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #EC3B3B; 
+  background: #ec3b3b;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #EC3B3B; 
+  background: #ec3b3b;
 }
