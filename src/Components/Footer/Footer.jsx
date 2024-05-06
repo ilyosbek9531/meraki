@@ -78,13 +78,13 @@ export function Footer() {
           <div className={styles.star_items}>
             <span className={`${styles.star_items_item} ${styles.item1}`}>
               {/* <img src="../../Portal.png" alt="" /> */}
-              <StarIcon/>
+              <StarIcon />
             </span>
             <span className={`${styles.star_items_item} ${styles.item2}`}>
-              <StarIcon/>
+              <StarIcon />
             </span>
             <span className={`${styles.star_items_item} ${styles.item3}`}>
-              <StarIcon/>
+              <StarIcon />
             </span>
           </div>
           <div className={styles.footer_main_logo}>

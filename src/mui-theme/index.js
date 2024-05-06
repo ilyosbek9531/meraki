@@ -53,37 +53,54 @@ const createCustomTheme = ({ mode, amber, grey, deepOrange }) => {
             },
           },
           outlined: {
-            fontFamily: "Poppins",
+            fontFamily: "Poppins !important",
             border: "1px solid #606389",
             background: "#fff",
             "&:hover": {
               ...(mode === "light"
-              ? {
-                  background: "#EC3B3B",
-                  color: "#fff",
-                  border: "1px solid #EC3B3B"
-                }
-              : {
-                  background: "#2B2D42",
-                  color: "#fff",
-                  border: "1px solid #2B2D42"
-                }),
-
+                ? {
+                    background: "#EC3B3B",
+                    color: "#fff",
+                    border: "1px solid #EC3B3B",
+                  }
+                : {
+                    background: "#2B2D42",
+                    color: "#fff",
+                    border: "1px solid #2B2D42",
+                  }),
             },
           },
           contained: {
-            fontFamily: "Poppins",
+            fontFamily: "Poppins !important",
 
             "&:hover": {
               ...(mode === "light"
-              ? {
-                  background: "#EC3B3B",
-                  color: "#fff",
-                }
-              : {
-                  background: "#2B2D42",
-                  color: "#fff",
-                }),
+                ? {
+                    background: "#EC3B3B",
+                    color: "#fff",
+                  }
+                : {
+                    background: "#2B2D42",
+                    color: "#fff",
+                  }),
+            },
+          },
+          lighted: {
+            fontFamily: "Poppins !important",
+            border: "1px solid #606389",
+            background: "#fff",
+            color: "#2B2D42",
+            "&:hover": {
+              ...(mode === "light"
+                ? {
+                    background: "#2B2D42",
+                    color: "#fff",
+                  }
+                : {
+                    background: "#EC3B3B",
+                    color: "#fff",
+                    border: "1px solid #2B2D42",
+                  }),
             },
           },
           hovered: {
@@ -128,7 +145,7 @@ const createCustomTheme = ({ mode, amber, grey, deepOrange }) => {
       },
     },
     typography: {
-      fontFamily: "Inter",
+      fontFamily: "Poppins !important",
       h1: {
         fontSize: rem(56),
         fontWeight: 700,
