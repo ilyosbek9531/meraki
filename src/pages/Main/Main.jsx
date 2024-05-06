@@ -10,6 +10,7 @@ import Reviews from "Components/Reviews/Reviews";
 import Partners from "Components/Partners/Partners";
 import { Article } from "@mui/icons-material";
 import Articles from "Components/Articles/Articles";
+import Contact from "Components/Contact/Contact";
 const data = {
   root1: [
     {
@@ -41,6 +42,24 @@ const data = {
     },
   ],
   root2: [
+    {
+      text: "digital-marketing",
+      color: "#EC3B3B",
+      dark: "#000",
+    },
+    {
+      text: "meraki",
+      color: "#fff",
+    },
+    {
+      text: "digital-marketing",
+      color: "#EC3B3B",
+      dark: "#000",
+    },
+    {
+      text: "meraki",
+      color: "#fff",
+    },
     {
       text: "digital-marketing",
       color: "#EC3B3B",
@@ -82,6 +101,10 @@ const Main = () => {
       </div>
 
       <Articles/>
+
+      <div style={{ backgroundColor: mode === "light" ? "#EC3B3B" : "" }}>
+        <Contact data = {data} isActive={true}/>
+      </div>
     </div>
   );
 };

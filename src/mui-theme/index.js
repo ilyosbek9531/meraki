@@ -1,4 +1,3 @@
-// https://mui.com/material-ui/customization/theming/
 import { createTheme } from "@mui/material";
 import { rem } from "utils/pxToRem";
 
@@ -73,6 +72,21 @@ const createCustomTheme = ({ mode, amber, grey, deepOrange }) => {
             },
           },
           contained: {
+            fontFamily: "Poppins",
+
+            "&:hover": {
+              ...(mode === "light"
+              ? {
+                  background: "#EC3B3B",
+                  color: "#fff",
+                }
+              : {
+                  background: "#2B2D42",
+                  color: "#fff",
+                }),
+            },
+          },
+          hovered: {
             fontFamily: "Poppins",
 
             "&:hover": {
