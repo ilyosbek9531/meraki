@@ -1,0 +1,42 @@
+@import "styles/mixins.scss";
+
+.preusible {
+  @include direction-column;
+  gap: 30px;
+
+  &_tabs {
+    @include justify-content-center;
+    flex-wrap: wrap;
+    &_inner {
+      @include align-items-center;
+      gap: 20px;
+    }
+  }
+
+  &_cards {
+    @include direction-column;
+    gap: 30px;
+    border: 2px solid white;
+
+    &_card {
+      @include align-items-center;
+      gap: 20px;
+
+
+      .main_card{
+        width: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .four_cards{
+        width: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+    }
+  }
+}

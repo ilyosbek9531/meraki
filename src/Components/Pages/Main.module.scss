@@ -1,0 +1,9 @@
+@import "styles/mixins.scss";
+
+
+.main{
+    @include direction-column;
+    gap: 100px;
+}
+
+

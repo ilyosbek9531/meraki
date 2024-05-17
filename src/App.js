@@ -1,5 +1,5 @@
-import { Navbar } from "./Components/Navbar/Navbar";
-import { Footer } from "./Components/Footer/Footer";
+import { Navbar } from "./Components/UI/Navbar/Navbar";
+import { Footer } from "./Components/UI/Footer/Footer";
 import { Routes } from "./routes";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -17,15 +17,15 @@ function App() {
     grey,
     deepOrange,
   });
-  const [isHovering, setIsHovering] = useState(false);
+  // const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
+  // const handleMouseEnter = () => {
+  //   setIsHovering(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovering(false);
+  // };
 
   return (
     <ThemeProvider theme={theme}>

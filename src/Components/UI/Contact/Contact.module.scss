@@ -1,0 +1,148 @@
+@import "styles/mixins.scss";
+
+.contact {
+  width: 100%;
+
+  &_wrapper {
+    display: flex;
+    gap: 20px;
+
+    &_infos {
+      @include direction-column;
+      gap: 100px;
+      padding: 70px;
+      color: #fff;
+      border-radius: 40px;
+      width: 35%;
+
+      .box {
+        @include element-center;
+        gap: 50px;
+
+        .icon_wrapper {
+          width: 64px;
+          height: 64px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &_content {
+          @include direction-column;
+          gap: 10px;
+
+          .title {
+            font-size: 30px;
+            font-weight: 400;
+            letter-spacing: 2px;
+          }
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 1px;
+          }
+        }
+
+        .medias {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+    }
+
+    &_form {
+      width: 65%;
+      border-radius: 40px;
+      padding: 40px;
+      @include direction-column;
+      gap: 20px;
+
+      .input {
+        @include direction-column;
+        gap: 10px;
+
+        label {
+          font-size: 19px;
+          letter-spacing: 1px;
+          font-weight: 400;
+        }
+        input,
+        textarea {
+          padding: 15px;
+          border: 1px solid #cbcdde;
+          font-size: 20px;
+          border-radius: 10px;
+
+          &::placeholder {
+            color: #cbcdde;
+          }
+
+          &:focus {
+            border-color: #202132;
+          }
+        }
+
+        textarea {
+          width: 799px;
+          height: 220px;
+          resize: none;
+        }
+      }
+
+      select {
+        width: 370px;
+        padding: 15px;
+        border: 1px solid #cbcdde;
+        font-size: 20px;
+        border-radius: 10px;
+        background: #fff;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .button {
+        font-size: 19px;
+      }
+
+      .service {
+        @include direction-column;
+        gap: 15px;
+
+        &_title {
+          font-size: 19px;
+          letter-spacing: 1px;
+          font-weight: 400;
+        }
+        &_checkbox {
+          @include align-items-center;
+          gap: 10px;
+          font-size: 18px;
+          font-weight: 400;
+        
+          label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+          }
+        
+          input[type="checkbox"] {
+            // display: none; // Hide the default checkbox
+        
+            width: 20px;
+            height: 20px;
+            background-color: white; 
+            border: 2px solid #EC3B3B; 
+            border-radius: 4px;
+          }
+        }
+        
+      }
+    }
+  }
+}

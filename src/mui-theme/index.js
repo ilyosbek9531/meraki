@@ -72,7 +72,6 @@ const createCustomTheme = ({ mode, amber, grey, deepOrange }) => {
           },
           contained: {
             fontFamily: "Poppins !important",
-
             "&:hover": {
               ...(mode === "light"
                 ? {
