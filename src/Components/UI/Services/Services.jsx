@@ -11,67 +11,68 @@ import serviceImg5 from "../../../assets/images/digital .png"
 import serviceImg6 from "../../../assets/images/website.png"
 
 
+const config ={
+  data: [
+      {
+        img: serviceImg1,
+        subtitle: "Communication",
+        serviceTypes: [
+          { name: "SMM promotion", link: "/smm-promotion" },
+          { name: "SMM promotion", link: "/smm-promotion" },
+          { name: "SMM promotion", link: "/smm-promotion" }
+        ]
+      },
+      {
+        img:serviceImg2,
+        subtitle: "Performance-marketing",
+        serviceTypes: [
+          { name: "Target advertising", link: "/target-advertising" },
+          { name: "Content advertising", link: "/content-advertising" },
+          { name: "SEO - website promotion", link: "/seo-website-promotion" }
+        ]
+      },
+      {
+        img: serviceImg3,
+        subtitle: "Branding",
+        serviceTypes: [
+          { name: "Identity", link: "/identity" },
+          { name: "Naming", link: "/naming" },
+          { name: "Design support", link: "/design-support" }
+        ]
+      },
+      {
+        img: serviceImg4,
+        subtitle: "Communocation",
+        serviceTypes: [
+          { name: "SMM promotion", link: "/smm-promotion" },
+          { name: "SMM promotion", link: "/smm-promotion" },
+          { name: "SMM promotion", link: "/smm-promotion" }
+        ]
+      },
+      {
+        img: serviceImg5,
+        subtitle: "Comprehensive promotion",
+        serviceTypes: [
+          { name: "Analytics", link: "/analytics" },
+          { name: "Optimization", link: "/optimization" },
+          { name: "High-quality advertising creative", link: "/high-quality-advertising-creative" }
+        ]
+      },
+      {
+        img: serviceImg6,
+        subtitle: "Websites",
+        serviceTypes: [
+          { name: "UX/UI design", link: "/ux-ui-design" },
+          { name: "No-code development", link: "/no-code-development" },
+          { name: "Technical support", link: "/technical-support" }
+        ]
+      }
+    ]
+}
 
-const data = [
-  {
-    img: serviceImg1,
-    subtitle: "Communication",
-    serviceTypes: [
-      { name: "SMM promotion", link: "/smm-promotion" },
-      { name: "SMM promotion", link: "/smm-promotion" },
-      { name: "SMM promotion", link: "/smm-promotion" }
-    ]
-  },
-  {
-    img:serviceImg2,
-    subtitle: "Performance-marketing",
-    serviceTypes: [
-      { name: "Target advertising", link: "/target-advertising" },
-      { name: "Content advertising", link: "/content-advertising" },
-      { name: "SEO - website promotion", link: "/seo-website-promotion" }
-    ]
-  },
-  {
-    img: serviceImg3,
-    subtitle: "Branding",
-    serviceTypes: [
-      { name: "Identity", link: "/identity" },
-      { name: "Naming", link: "/naming" },
-      { name: "Design support", link: "/design-support" }
-    ]
-  },
-  {
-    img: serviceImg4,
-    subtitle: "Communocation",
-    serviceTypes: [
-      { name: "SMM promotion", link: "/smm-promotion" },
-      { name: "SMM promotion", link: "/smm-promotion" },
-      { name: "SMM promotion", link: "/smm-promotion" }
-    ]
-  },
-  {
-    img: serviceImg5,
-    subtitle: "Comprehensive promotion",
-    serviceTypes: [
-      { name: "Analytics", link: "/analytics" },
-      { name: "Optimization", link: "/optimization" },
-      { name: "High-quality advertising creative", link: "/high-quality-advertising-creative" }
-    ]
-  },
-  {
-    img: serviceImg6,
-    subtitle: "Websites",
-    serviceTypes: [
-      { name: "UX/UI design", link: "/ux-ui-design" },
-      { name: "No-code development", link: "/no-code-development" },
-      { name: "Technical support", link: "/technical-support" }
-    ]
-  }
-];
-
-
-export default function Services() {
-  const sliceData = data.slice(0, 6);
+export default function Services({isSliceData}) {
+  const sliceData = config?.data?.slice(0, 6);
+  const serviceData = isSliceData ? sliceData : config?.data;
 
   return (
     <Container>
@@ -79,8 +80,8 @@ export default function Services() {
           <h1 className="title">{t("Our Services")}</h1>
 
           <div className={styles.services_wrapper_boxes}>
-            {sliceData?.map((item)=>(
-              <ServiceItem img={item.img} subtitle={item.subtitle} serviceTypes={item.serviceTypes}/>              
+            {serviceData?.map((item)=>(
+              <ServiceItem key={item.id} img={item.img} subtitle={item.subtitle} serviceTypes={item.serviceTypes}/>              
             ))}
           </div>
         </div>

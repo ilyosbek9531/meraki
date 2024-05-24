@@ -1,21 +1,20 @@
 import React from 'react'
 import { useTheme } from "@mui/material";
-import { useTranslation } from "react-i18next";
 import Home from 'Components/UI/Home/Home';
 import Services from 'Components/UI/Services/Services';
 import CountUpComp from 'Components/UI/CountupComp/CountUpComp';
-import Projects from 'Components/UI/Projects/Projects';
+import Projects from 'Components/Pages/Projects/Projects';
 import ChooseUs from 'Components/UI/ChooseUs/ChooseUs';
 import Reviews from 'Components/UI/Reviews/Reviews';
 import Partners from 'Components/UI/Partners/Partners';
-import Articles from 'Components/UI/Articles/Articles';
-import Contact from 'Components/UI/Contact/Contact';
+import Articles from 'Components/Pages/Articles/Articles';
+import Contact from 'Components/Pages/Contact/Contact';
 import styles from "./Main.module.scss"
+import FAQ from 'Components/UI/FAQ/FAQ';
 
 
 const Main_ = ({data}) => {
 
-    const { t, i18n } = useTranslation("common");
   const {
     palette: { mode },
   } = useTheme();
@@ -24,8 +23,7 @@ const Main_ = ({data}) => {
     <div className={styles.main}>
     <Home data={data} />
 
-    <Services />
-
+    <Services isSliceData={true}/>
     <div
       className={styles.projects_wrapper}
       style={{ backgroundColor: mode === "light" ? "#EC3B3B" : "" }}
@@ -43,11 +41,12 @@ const Main_ = ({data}) => {
       <Partners />
     </div>
 
-    <Articles/>
+    <Articles isSliceData={true}/>
 
     <div style={{ backgroundColor: mode === "light" ? "#EC3B3B" : "" }}>
       <Contact data = {data} isActive={true}/>
     </div>
+    <FAQ/>
   </div>
   )
 }

@@ -1,0 +1,36 @@
+@import "styles/mixins.scss";
+
+.blog{
+    @include direction-column;
+    gap: 40px;
+
+    .header_container{
+        @include justify-content-between;
+        align-items: center;
+
+        .title{
+            padding-bottom: 0 !important;
+        }
+    
+       span{
+        padding: 23px 20px 20px 20px;
+        border-radius: 50%;
+       }
+
+        
+    }
+}
+.darkStyles{
+    background-color: #EC3B3B;
+
+    &:hover{
+        background-color: #2B2D42;
+    }
+}
+.lightStyles{
+    background-color: #2B2D42;
+
+    &:hover{
+        background-color: #EC3B3B;
+    }
+}

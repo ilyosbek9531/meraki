@@ -2,6 +2,9 @@ import { useRoutes } from "react-router-dom";
 import NotFound from "pages/NotFound/NotFound";
 import Main from "pages/Main/Main";
 import Services from "pages/Services/Services";
+import Project from "pages/Projects/Projects";
+import Blogs from "pages/Blogs/Blogs";
+import Contact from "pages/Contact/Contact";
 
 export const Routes = () =>
   useRoutes([
@@ -14,16 +17,16 @@ export const Routes = () =>
       element: <Services />,
     },
     {
-      path: "/",
-      element: <Main />,
+      path: "/projects",
+      element: <Project />,
     },
     {
-      path: "/",
-      element: <Main />,
+      path: "/blog",
+      element: <Blogs />,
     },
     {
-      path: "/",
-      element: <Main />,
+      path: "/contact",
+      element: <Contact />,
     },
     {
       path: "*",

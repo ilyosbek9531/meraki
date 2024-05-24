@@ -1,4 +1,4 @@
-import Main_ from "Components/Pages/Main";
+import Main_ from "Components/Pages/Main/Main";
 import SEO from "../../SEO";
 const data = {
   root1: [
